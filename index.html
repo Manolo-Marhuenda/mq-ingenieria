@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<style>
+    /* Transición suave para toda la página */
+    html {
+        scroll-behavior: smooth;
+        /* Padding de compensación global para el menú fijo */
+        scroll-padding-top: 100px;
+    }
+
+    /* Forzamos el margen superior en cualquier elemento al que apunte el menú */
+    [id] {
+        scroll-margin-top: 100px !important;
+    }
+
+    /* Ajustes específicos para móviles */
+    @media (max-width: 768px) {
+        html {
+            scroll-padding-top: 160px; /* Más espacio en móvil porque el menú ocupa más filas */
+        }
+        
+        [id] {
+            scroll-margin-top: 160px !important;
+        }
+
+        .hero h1 {
+            font-size: 1.8rem !important;
+            line-height: 1.25 !important;
+            word-break: break-word !important;
+        }
+        
+        .hero-content {
+            padding: 20px 15px !important;
+        }
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M&Q Ingeniería | Homologación de Vehículos, Motos y Automatización Python</title>
+    <meta name="description" content="Oficina técnica especializada en la homologación de vehículos, reformas en motos (Cafe Racer, Scrambler) e ITV, y desarrollo de automatizaciones de procesos con Python.">
+    <link rel="stylesheet" href="/assets/index-6R2eVy0O.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="/logo.jpg" alt="M&Q Ingeniería">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#homologaciones">Homologaciones</a></li>
+                <li><a href="#automatizacion">Python & Software</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#contacto" class="btn-nav">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Ingeniería Especializada en Vehículos y Automatización con Python</h1>
+            <p>Legalizamos tus reformas de vehículos y motocicletas para la ITV y optimizamos los procesos operacionales de tu empresa mediante programación a medida.</p>
+            <a href="#contacto" class="btn-main">Consultar Proyecto</a>
+        </div>
+    </section>
+
+    <section id="homologaciones" class="services-container">
+        <h2>Homologación de Vehículos y Motocicletas</h2>
+        <p class="services-subtitle">Gestión técnica e integral de proyectos de reforma para pasar la ITV sin sorpresas ni complicaciones.</p>
+        <div class="services-grid">
+            <div class="card">
+                <div class="icon">🏍️</div>
+                <h3>Transformación de Motocicletas</h3>
+                <p>Proyectos de homologación para reformas en motos (Cafe Racer, Scrambler, Bobber). Legalización de cambios de subchasis, manillar, tubo de escape, iluminación, neumáticos, suspensiones y velocímetro.</p>
+            </div>
+            <div class="card">
+                <div class="icon">🚐</div>
+                <h3>Campers y Vehículos Vivienda</h3>
+                <p>Homologación de camperizaciones: legalización de instalaciones eléctricas, agua, gas, bases giratorias, claraboyas, paneles solares, aislamiento y mobiliario interior.</p>
+            </div>
+            <div class="card">
+                <div class="icon">🚜</div>
+                <h3>Turismos, 4x4 y Fichas Reducidas</h3>
+                <p>Reformas de importancia en todoterrenos y turismos (suspensión, ancho de vía, paragolpes, cabrestantes). Elaboración de fichas reducidas para la importación y matriculación de vehículos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="automatizacion" class="services-container alt-bg">
+        <h2>Automatización de Procesos con Python</h2>
+        <p class="services-subtitle">Desarrollo de software a medida para eliminar tareas repetitivas, integrar datos y acelerar tu negocio.</p>
+        <div class="services-grid">
+            <div class="card">
+                <div class="icon">⚙️</div>
+                <h3>Scripts y Bot de Procesos</h3>
+                <p>Automatización de tareas rutinarias en hojas de cálculo, lectura/generación masiva de PDF o Excel, y extracción de datos web (web scraping) para toma de decisiones.</p>
+            </div>
+            <div class="card">
+                <div class="icon">🔗</div>
+                <h3>Integración de Sistemas y APIs</h3>
+                <p>Conexión entre diferentes aplicaciones, bases de datos y plataformas software para que la información fluya automáticamente sin intervención humana.</p>
+            </div>
+            <div class="card">
+                <div class="icon">📊</div>
+                <h3>Herramientas Técnicas a Medida</h3>
+                <p>Desarrollo de scripts avanzados en Python para cálculos de ingeniería, procesamiento de datos masivos e informes analíticos automatizados.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre-mi" class="about">
+        <div class="about-text">
+            <h2>Ingeniería y Programación Avanzada</h2>
+            <p>Detrás de M&Q Ingeniería está <strong>Manuel Marhuenda Quirante</strong>, Ingeniero Industrial por Tecnun (Universidad de Navarra) y colegiado Técnico Nº 7380 del IICV.</p>
+            <p>Combinamos el rigor de la ingeniería tradicional para proyectos de homologación en ITV con el poder de la programación moderna en Python para automatizar y escalar procesos tecnológicos.</p>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact">
+        <h2>Contacto Profesional</h2>
+        <p class="contact-subtitle">¿Tienes un proyecto de homologación o quieres automatizar un proceso en tu empresa? Hablemos.</p>
+        
+        <div class="contact-info">
+            <div class="info-item">
+                <h4>📍 Ubicación</h4>
+                <p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Calle+Obispo+Rocamora+15,+03300+Orihuela,+Alicante" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        Calle Obispo Rocamora 15<br>03300 Orihuela (Alicante)
+                    </a>
+                </p>
+            </div>
+            <div class="info-item">
+                <h4>📞 Teléfono</h4>
+                <p><a href="tel:+34655441056" style="color: inherit; text-decoration: none;">655441056</a></p>
+            </div>
+            <div class="info-item">
+                <h4>✉️ Correo Electrónico</h4>
+                <p><a href="mailto:manuel@mqingenieria.es" style="color: inherit; text-decoration: none; font-size: 15px;">manuel@mqingenieria.es</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 M&Q Ingeniería. Todos los derechos reservados.</p>
+    </footer>
+
+    <script type="module" src="/assets/index-DuOJ92IH.js"></script>
+</body>
+</html>
