@@ -1,48 +1,159 @@
 <!DOCTYPE html>
 <html lang="es">
-<style>
-    /* Transición suave para toda la página */
-    html {
-        scroll-behavior: smooth;
-        /* Padding de compensación global para el menú fijo */
-        scroll-padding-top: 100px;
-    }
-
-    /* Forzamos el margen superior en cualquier elemento al que apunte el menú */
-    [id] {
-        scroll-margin-top: 100px !important;
-    }
-
-    /* Ajustes específicos para móviles */
-    @media (max-width: 768px) {
-        html {
-            scroll-padding-top: 160px; /* Más espacio en móvil porque el menú ocupa más filas */
-        }
-        
-        [id] {
-            scroll-margin-top: 160px !important;
-        }
-
-        .hero h1 {
-            font-size: 1.8rem !important;
-            line-height: 1.25 !important;
-            word-break: break-word !important;
-        }
-        
-        .hero-content {
-            padding: 20px 15px !important;
-        }
-    }
-</style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M&Q Ingeniería | Homologación de Vehículos, Motos y Automatización Python</title>
-    <meta name="description" content="Oficina técnica especializada en la homologación de vehículos, reformas en motos (Cafe Racer, Scrambler) e ITV, y desarrollo de automatizaciones de procesos con Python.">
+    <title>M&Q Ingeniería | Legalización e Homologación de Vehículos para ITV</title>
+    <meta name="description" content="Oficina técnica especializada en la homologación de reformas en vehículos: Campers, 4x4, Turismos, Motos Custom (Cafe Racer) y Fichas Reducidas para ITV.">
     <link rel="stylesheet" href="/assets/index-6R2eVy0O.css">
+    <style>
+        /* Transición suave y offset para la navbar fija */
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        [id] {
+            scroll-margin-top: 100px !important;
+        }
+
+        @media (max-width: 768px) {
+            html {
+                scroll-padding-top: 160px;
+            }
+            [id] {
+                scroll-margin-top: 160px !important;
+            }
+            .hero h1 {
+                font-size: 1.8rem !important;
+                line-height: 1.25 !important;
+                word-break: break-word !important;
+            }
+            .hero-content {
+                padding: 20px 15px !important;
+            }
+            .services-grid-4 {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        /* Botón Flotante de WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: #ffffff !important;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 15px;
+            font-weight: bold;
+            box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            gap: 10px;
+            text-decoration: none;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.05);
+            background-color: #1eb954;
+        }
+        .whatsapp-icon {
+            width: 24px;
+            height: 24px;
+            fill: #ffffff;
+        }
+
+        /* Estilos de refuerzo para cuadrícula de 4 elementos */
+        .services-grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        /* Badges de confianza */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 25px 0 0 0;
+            padding: 0;
+            list-style: none;
+        }
+        .trust-badge-item {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* Formulario Express */
+        .express-form {
+            max-width: 600px;
+            margin: 40px auto 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            text-align: left;
+        }
+        .express-form label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #333;
+        }
+        .express-form input, 
+        .express-form select, 
+        .express-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 18px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            box-sizing: border-box;
+        }
+        .express-form button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            background-color: #0056b3;
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .express-form button:hover {
+            background-color: #003d80;
+        }
+    </style>
 </head>
 <body>
 
+    <!-- Botón Flotante de WhatsApp para Conversión Directa -->
+    <a href="https://wa.me/34655441056?text=Hola%20Manuel,%20quiero%20consultar%20la%20homologaci%C3%B3n%20de%20mi%20veh%C3%ADculo" 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Contactar por WhatsApp">
+        <svg class="whatsapp-icon" viewBox="0 0 32 32">
+            <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 8.135-2.135c2.372 1.3 5.062 1.987 7.865 1.987 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.35c-2.48 0-4.912-0.67-7.037-1.935l-0.505-0.3-5.23 1.37 1.397-5.1-0.33-0.525c-1.383-2.197-2.115-4.737-2.115-7.36 0-7.625 6.205-13.83 13.83-13.83s13.83 6.205 13.83 13.83-6.205 13.83-13.83 13.83zM22.583 19.345c-0.36-0.18-2.13-1.052-2.46-1.172-0.33-0.12-0.57-0.18-0.81 0.18s-0.93 1.172-1.14 1.412c-0.21 0.24-0.42 0.27-0.78 0.09-0.36-0.18-1.52-0.56-2.897-1.788-1.072-0.957-1.797-2.138-2.007-2.498s-0.022-0.555 0.158-0.733c0.162-0.16 0.36-0.42 0.54-0.63 0.18-0.21 0.24-0.36 0.36-0.6 0.12-0.24 0.06-0.45-0.03-0.63s-0.81-1.95-1.11-2.67c-0.293-0.702-0.593-0.607-0.81-0.617-0.21-0.01-0.45-0.01-0.69-0.01s-0.63 0.09-0.96 0.45c-0.33 0.36-1.26 1.23-1.26 3 0 1.77 1.29 3.48 1.47 3.72 0.18 0.24 2.54 3.88 6.15 5.44 0.86 0.37 1.53 0.59 2.05 0.76 0.86 0.27 1.65 0.23 2.27 0.14 0.69-0.1 2.13-0.87 2.43-1.71 0.3-0.84 0.3-1.56 0.21-1.71-0.09-0.15-0.33-0.24-0.69-0.42z"></path>
+        </svg>
+        <span>¿Dudas? Escríbeme por WhatsApp</span>
+    </a>
+
+    <!-- Navbar -->
     <header class="navbar">
         <div class="logo">
             <img src="/logo.jpg" alt="M&Q Ingeniería">
@@ -51,78 +162,131 @@
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#homologaciones">Homologaciones</a></li>
-                <li><a href="#automatizacion">Python & Software</a></li>
+                <li><a href="#proceso">Proceso</a></li>
                 <li><a href="#sobre-mi">Sobre Mí</a></li>
-                <li><a href="#contacto" class="btn-nav">Contacto</a></li>
+                <li><a href="#contacto" class="btn-nav">Pedir Presupuesto</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Hero Section Directo a Homologaciones -->
     <section id="inicio" class="hero">
         <div class="hero-content">
-            <h1>Ingeniería Especializada en Vehículos y Automatización con Python</h1>
-            <p>Legalizamos tus reformas de vehículos y motocicletas para la ITV y optimizamos los procesos operacionales de tu empresa mediante programación a medida.</p>
-            <a href="#contacto" class="btn-main">Consultar Proyecto</a>
+            <h1>Legalizamos la Reforma de tu Vehículo para la ITV</h1>
+            <p>Proyectos técnicos de homologación sin sorpresas, sin rodeos y con total garantía legal. Tramitación rápida para que solo te preocupes de disfrutar de tu máquina.</p>
+            
+            <div style="margin-top: 25px; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="https://wa.me/34655441056?text=Hola%20Manuel,%20quiero%20consultar%20la%20homologaci%C3%B3n%20de%20mi%20veh%C3%ADculo" class="btn-main" style="background-color: #25d366; color: #fff;">💬 Consulta por WhatsApp</a>
+                <a href="#contacto" class="btn-main">📋 Presupuesto Express</a>
+            </div>
+
+            <ul class="trust-badges">
+                <li class="trust-badge-item">✓ Ingeniero Industrial Colegiado Nº 7380</li>
+                <li class="trust-badge-item">✓ Válido en cualquier ITV de España</li>
+                <li class="trust-badge-item">✓ Asesoramiento previo gratuito</li>
+            </ul>
         </div>
     </section>
 
+    <!-- Sección de Especialidades en Homologación -->
     <section id="homologaciones" class="services-container">
-        <h2>Homologación de Vehículos y Motocicletas</h2>
-        <p class="services-subtitle">Gestión técnica e integral de proyectos de reforma para pasar la ITV sin sorpresas ni complicaciones.</p>
-        <div class="services-grid">
-            <div class="card">
-                <div class="icon">🏍️</div>
-                <h3>Transformación de Motocicletas</h3>
-                <p>Proyectos de homologación para reformas en motos (Cafe Racer, Scrambler, Bobber). Legalización de cambios de subchasis, manillar, tubo de escape, iluminación, neumáticos, suspensiones y velocímetro.</p>
-            </div>
+        <h2>Servicios de Homologación e ITV</h2>
+        <p class="services-subtitle">Gestión técnica e integral de proyectos de reforma para pasar la ITV a la primera.</p>
+        
+        <div class="services-grid-4">
             <div class="card">
                 <div class="icon">🚐</div>
                 <h3>Campers y Vehículos Vivienda</h3>
-                <p>Homologación de camperizaciones: legalización de instalaciones eléctricas, agua, gas, bases giratorias, claraboyas, paneles solares, aislamiento y mobiliario interior.</p>
+                <p>Legalizamos tu camperización: instalaciones eléctricas (230V/12V), agua, gas, bases giratorias, claraboyas, paneles solares, aislamiento y estructuras de mobiliario interior.</p>
             </div>
+            
             <div class="card">
                 <div class="icon">🚜</div>
-                <h3>Turismos, 4x4 y Fichas Reducidas</h3>
-                <p>Reformas de importancia en todoterrenos y turismos (suspensión, ancho de vía, paragolpes, cabrestantes). Elaboración de fichas reducidas para la importación y matriculación de vehículos.</p>
+                <h3>Todoterrenos 4x4 y Turismos</h3>
+                <p>Homologación de reformas de importancia: kits de suspensión, elevación, body lift, paragolpes metálicos, cabrestantes (winches), snórkel, anchos de vía y neumáticos.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🏍️</div>
+                <h3>Motos Custom (Cafe Racer / Scrambler)</h3>
+                <p>Transformaciones de motocicletas: modificación o recorte de subchasis, manillar, tubos de escape, velocímetros, llantas, neumáticos, suspensiones y ópticas LED.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">📄</div>
+                <h3>Fichas Reducidas de Importación</h3>
+                <p>Elaboración urgente de fichas reducidas para la matriculación de coches y motos importados (Alemania, Francia, etc.) y vehículos históricos. Entrega en 24-48 horas.</p>
             </div>
         </div>
     </section>
 
-    <section id="automatizacion" class="services-container alt-bg">
-        <h2>Automatización de Procesos con Python</h2>
-        <p class="services-subtitle">Desarrollo de software a medida para eliminar tareas repetitivas, integrar datos y acelerar tu negocio.</p>
+    <!-- Sección Explicativa del Proceso -->
+    <section id="proceso" class="services-container alt-bg">
+        <h2>¿Cómo Homologamos tu Vehículo?</h2>
+        <p class="services-subtitle">Un proceso claro y transparente en solo 4 pasos para que pases la ITV sin dolores de cabeza.</p>
+        
         <div class="services-grid">
             <div class="card">
-                <div class="icon">⚙️</div>
-                <h3>Scripts y Bot de Procesos</h3>
-                <p>Automatización de tareas rutinarias en hojas de cálculo, lectura/generación masiva de PDF o Excel, y extracción de datos web (web scraping) para toma de decisiones.</p>
+                <div class="icon">1️⃣</div>
+                <h3>Consulta Previa Gratuita</h3>
+                <p>Nos mandas por WhatsApp o correo la foto de la Ficha Técnica y las fotos de la reforma. Evaluamos la viabilidad técnica antes de que gastes un solo euro.</p>
             </div>
             <div class="card">
-                <div class="icon">🔗</div>
-                <h3>Integración de Sistemas y APIs</h3>
-                <p>Conexión entre diferentes aplicaciones, bases de datos y plataformas software para que la información fluya automáticamente sin intervención humana.</p>
+                <div class="icon">2️⃣</div>
+                <h3>Presupuesto Cerrado</h3>
+                <p>Te entregamos un presupuesto claro y final, incluyendo el Proyecto Técnico, la Dirección de Obra y el Informe de Conformidad del Laboratorio.</p>
             </div>
             <div class="card">
-                <div class="icon">📊</div>
-                <h3>Herramientas Técnicas a Medida</h3>
-                <p>Desarrollo de scripts avanzados en Python para cálculos de ingeniería, procesamiento de datos masivos e informes analíticos automatizados.</p>
+                <div class="icon">3️⃣</div>
+                <h3>Redacción del Proyecto</h3>
+                <p>Elaboramos la documentación técnica oficial exigida por el Manual de Reformas de Vehículos y coordinamos la aprobación con el laboratorio acreditado.</p>
             </div>
+        </div>
+        <div style="text-align: center; margin-top: 25px;">
+            <p style="font-size: 1.1rem; font-weight: 600;">4️⃣ <strong>¡A la ITV!</strong> Te enviamos el expediente completo listo para presentar en la estación de ITV que elijas.</p>
         </div>
     </section>
 
+    <!-- Sobre Mí - Confianza Profesional -->
     <section id="sobre-mi" class="about">
         <div class="about-text">
-            <h2>Ingeniería y Programación Avanzada</h2>
+            <h2>Ingeniería Legal al Servicio de tu Vehículo</h2>
             <p>Detrás de M&Q Ingeniería está <strong>Manuel Marhuenda Quirante</strong>, Ingeniero Industrial por Tecnun (Universidad de Navarra) y colegiado Técnico Nº 7380 del IICV.</p>
-            <p>Combinamos el rigor de la ingeniería tradicional para proyectos de homologación en ITV con el poder de la programación moderna en Python para automatizar y escalar procesos tecnológicos.</p>
+            <p>Sin intermediarios ni plataformas impersonales. Tratas directamente con el ingeniero responsable de firmar y garantizar que la documentación técnica de tu camper, 4x4 o moto cumpla estrictamente con la normativa vigente para la ITV.</p>
         </div>
     </section>
 
+    <!-- Sección de Contacto con Formulario Express -->
     <section id="contacto" class="contact">
-        <h2>Contacto Profesional</h2>
-        <p class="contact-subtitle">¿Tienes un proyecto de homologación o quieres automatizar un proceso en tu empresa? Hablemos.</p>
+        <h2>Pide tu Presupuesto de Homologación</h2>
+        <p class="contact-subtitle">Cuéntame qué reformas tiene tu vehículo y te responderé a la mayor brevedad posible.</p>
         
-        <div class="contact-info">
+        <!-- Formulario Express de Captación -->
+        <form class="express-form" action="mailto:manuel@mqingenieria.es" method="post" enctype="text/plain">
+            <label for="nombre">Nombre o Empresa:</label>
+            <input type="text" id="nombre" name="Nombre" placeholder="Tu nombre" required>
+
+            <label for="telefono">Teléfono / WhatsApp:</label>
+            <input type="tel" id="telefono" name="Telefono" placeholder="Ej: 600 000 000" required>
+
+            <label for="tipo">Tipo de Vehículo:</label>
+            <select id="tipo" name="Tipo_Vehiculo">
+                <option value="Camper">Camper / Vehículo Vivienda</option>
+                <option value="4x4">4x4 / Todoterreno</option>
+                <option value="Turismo">Turismo</option>
+                <option value="Moto">Moto Custom / Cafe Racer</option>
+                <option value="FichaReducida">Ficha Reducida (Importación)</option>
+                <option value="Otro">Otro tipo de vehículo</option>
+            </select>
+
+            <label for="reformas">Lista de Reformas o Detalles:</label>
+            <textarea id="reformas" name="Reformas" rows="4" placeholder="Ej: He instalado panel solar, claraboya y asiento giratorio / Cambio de suspensión y ancho de vía..." required></textarea>
+
+            <button type="submit">🚀 Solicitar Presupuesto sin Compromiso</button>
+        </form>
+
+        <!-- Datos Directos -->
+        <div class="contact-info" style="margin-top: 40px;">
             <div class="info-item">
                 <h4>📍 Ubicación</h4>
                 <p>
@@ -134,8 +298,8 @@
                 </p>
             </div>
             <div class="info-item">
-                <h4>📞 Teléfono</h4>
-                <p><a href="tel:+34655441056" style="color: inherit; text-decoration: none;">655 44 10 56</a></p>
+                <h4>📞 Teléfono / WhatsApp</h4>
+                <p><a href="tel:+34655441056" style="color: inherit; text-decoration: none; font-weight: bold;">655 44 10 56</a></p>
             </div>
             <div class="info-item">
                 <h4>✉️ Correo Electrónico</h4>
